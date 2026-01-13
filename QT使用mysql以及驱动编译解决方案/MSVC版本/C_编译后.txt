@@ -1,0 +1,13 @@
+驱动复制：编译后需要手动复制qsqlmysql.dll到：
+
+G:\QT\6.5.3\msvc2019_64\plugins\sqldrivers\
+
+以及对应的libmysql.dll到bin\目录
+
+运行时部署：发布程序时需要包含：
+
+qsqlmysql.dll
+
+libmysql.dll
+
+可能还有其他MySQL依赖DLL

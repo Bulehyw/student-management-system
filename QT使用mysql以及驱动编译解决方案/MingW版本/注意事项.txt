@@ -1,0 +1,6 @@
+
+批处理中的
+set QT_DIR=G:\QT\6.5.3
+set MYSQL_INC=G:\uiii\include
+set MYSQL_LIB=G:\uiii\lib\libmysql.lib
+三个文件夹需改为自己的文件夹路径，将MySQL Server 8.0中的include文件夹，lib文件夹复制出来即可文件名不能有空格！！！

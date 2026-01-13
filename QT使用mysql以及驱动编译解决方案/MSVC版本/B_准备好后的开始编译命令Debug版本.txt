@@ -1,0 +1,21 @@
+REM 1. 进入驱动源码目录
+cd G:\QT\6.5.3\Src\qtbase\src\plugins\sqldrivers
+
+REM 2. 清理并创建build目录
+rd /s /q build
+mkdir build
+cd build
+
+REM 3. 配置CMake（自动检测VS2022）
+cmake .. -DCMAKE_PREFIX_PATH="G:/QT/6.5.3/msvc2019_64" ^
+         -DMySQL_INCLUDE_DIR="G:/uiii/include" ^
+         -DMySQL_LIBRARY="G:/uiii/lib/libmysql.lib"
+
+REM 4. 编译Debug版本（成功）
+cmake --build . --config Debug
+
+REM 5. 输出文件：qsqlmysqld.dll（带d表示Debug）
+REM 位置：build\plugins\sqldrivers\qsqlmysqld.dll
+
+
+

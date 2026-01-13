@@ -1,0 +1,16 @@
+1. 从MySQL Server 8.0复制以下文件夹到没有空格的路径：
+   - include文件夹（包含mysql.h）
+   - lib文件夹（包含libmysql.lib）
+   - bin文件夹（包含libmysql.dll）
+   例如：D:\MySQLDev\
+
+2. 设置环境变量（在系统PATH中添加）：
+   - G:\QT\Tools\CMake_64\bin
+   - G:\QT\6.5.3\msvc2019_64\bin
+   - D:\MySQLDev\bin  （你的MySQL bin目录）
+   - 注意：无需添加MySQL Server的lib到PATH
+
+3. 验证环境：
+   - 打开Developer Command Prompt for VS 2022
+   - 运行：cl.exe （应该能识别MSVC编译器）
+   - 运行：cmake --version （应该显示CMake版本）

@@ -1,0 +1,26 @@
+
+Release版本编译
+
+
+不重新配置可使用
+cmake --build . --config Release失败时使用下一个命令
+
+
+cmake --build . --config RelWithDebInfo
+########################################################
+重新配置编译Release的完整流程
+
+REM 1. 清理重建
+cd G:\QT\6.5.3\Src\qtbase\src\plugins\sqldrivers
+rd /s /q build
+mkdir build
+cd build
+
+REM 2. 明确指定Release配置
+cmake .. -DCMAKE_BUILD_TYPE=Release ^
+         -DCMAKE_PREFIX_PATH="G:/QT/6.5.3/msvc2019_64" ^
+         -DMySQL_INCLUDE_DIR="G:/uiii/include" ^
+         -DMySQL_LIBRARY="G:/uiii/lib/libmysql.lib"
+
+REM 3. 编译
+cmake --build .
